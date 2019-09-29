@@ -34,8 +34,8 @@ public class MaquinaEstados {
         estadoActual = automata.getEstadoInicial();
     }
     
-    /**Devuelve si un caracter es admitido por la expresión regular de acuerdo a su estado actual y si tiene un estado al que dirigirs
-     * @param character
+    /**Devuelve si un caracter es admitido por la expresión regular de acuerdo a su estado actual y si tiene un estado al que dirigirse
+     * @param character caracter a comprobar
      * @return */
     public boolean aceptar(Character character)
     {
@@ -61,9 +61,9 @@ public class MaquinaEstados {
         return verificar;
     }
     
-    /**Devuelve si un caracter es admitido por la expresión regular de acuerdo a su estado proporcionado y si tiene un estado al que dirigirs
-     * @param character
-     * @param estado
+    /**Devuelve si un caracter es admitido por la expresión regular de acuerdo a su estado proporcionado y si tiene un estado al que dirigirse
+     * @param character caracter a comprobar
+     * @param estado estado actual a estudiar para el caracter proporcionado
      * @return */
     public boolean aceptar(Character character, Integer estado)
     {
@@ -96,8 +96,8 @@ public class MaquinaEstados {
         return automata.isFinal(estadoActual);
     }
     
-    /**Verifica si una cadena es válida por nuestra expresión regular o n
-     * @param cadena
+    /**Verifica si una cadena es válida por la expresión regular o no
+     * @param cadena cadena a comprobar
      * @return */
     public boolean compruebaCadena(String cadena)
     {
@@ -138,10 +138,10 @@ public class MaquinaEstados {
     
     /**Comprueba y muestra las cadenas que son válidas por nuestra expresión regular que tengan un número igual o menor que el proporcionado
      * en el contador y mayor o igual que 0
-     * @param cadenaPrincipal
-     * @param contador
-     * @param listaCaracteresAceptados
-     * @param estado*/
+     * @param cadenaPrincipal cadena que se tiene como válida hasta el momento
+     * @param contador máximo número de caracteres admitidos
+     * @param listaCaracteresAceptados lista de caracteres admitidos del alfabeto dentro de la expresión regular del AFD
+     * @param estado estado actual válido de la cadena hasta el momento*/
     public void comprobarCadena(String cadenaPrincipal, int contador, List<Character> listaCaracteresAceptados, Integer estado)
     {
         String cadenaSecundaria;
@@ -170,12 +170,12 @@ public class MaquinaEstados {
     
     /**Comprueba y muestra las cadenas que son válidas por nuestra expresión regular que tengan un número igual o menor que el proporcionado
      * en el contador y mayor o igual que 0 y si es inferior o igual al límite proporcionado
-     * @param cadenaPrincipal
-     * @param contador
-     * @param listaCaracteresAceptados
-     * @param estado
-     * @param maxNumCadenas
-     * @param data*/
+     * @param cadenaPrincipal cadena que se tiene como válida hasta el momento
+     * @param contador máximo número de caracteres admitidos
+     * @param listaCaracteresAceptados lista de caracteres admitidos del alfabeto dentro de la expresión regular del AFD
+     * @param estado estado actual válido de la cadena hasta el momento
+     * @param maxNumCadenas máximo número de cadenas admitidas
+     * @param data objeto que proporciona el número de cadenas realizadas hasta el momento*/
     public void comprobarCadena(String cadenaPrincipal, int contador, List<Character> listaCaracteresAceptados, Integer estado, Integer maxNumCadenas, Data data)
     {
         String cadenaSecundaria;

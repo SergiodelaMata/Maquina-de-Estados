@@ -13,7 +13,7 @@ public class Data {
     private static Data instance;
     private Integer numCadenasRealizadas;
 
-    /**Devuelve una instancia del Objeto Dat
+    /**Devuelve una instancia del Objeto Data
      * @return */
     public static synchronized Data getInstance()
     {
@@ -28,14 +28,14 @@ public class Data {
         numCadenasRealizadas = 0;
     }
 
-    /**Devuelve el número de cadenas realizadas/mostradas por pantalla hasta el moment
+    /**Devuelve el número de cadenas realizadas/mostradas por pantalla hasta el momento
      * @return */
     public Integer getNumCadenasRealizadas() {
         return numCadenasRealizadas;
     }
 
-    /**Ajusta el nuevo valor para el número de cadenas realizadas/mostradas por pantalla hasta el moment
-     * @param counter*/
+    /**Ajusta el nuevo valor para el número de cadenas realizadas/mostradas por pantalla hasta el momento
+     * @param counter nuevo valor del número de cadenas realizadas*/
     public void setNumCadenasRealizadas(Integer counter) {
         this.numCadenasRealizadas = counter;
     }

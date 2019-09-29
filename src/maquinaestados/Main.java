@@ -63,7 +63,7 @@ public class Main {
                 int maxNumCadenas = Integer.parseInt(scanner.nextLine());
                 if(maxCaracteres > 0 && maxNumCadenas > 0)
                 {
-                    for(int i=1; i< maxCaracteres; i++)
+                    for(int i=0; i< maxCaracteres; i++)
                     {
                         maquinaEstados.comprobarCadena(cadenaPrincipal, i, listaCaracteresAdmitidos, maquinaEstados.getEstadoInicial(), maxNumCadenas, data);
                     }
@@ -75,7 +75,7 @@ public class Main {
             }
             else if(cadena.equals("No") || cadena.equals("no") || cadena.equals("NO") || cadena.equals("nO"))
             {
-                for(int i=1; i< maxCaracteres; i++)
+                for(int i=0; i< maxCaracteres; i++)
                 {
                     maquinaEstados.comprobarCadena(cadenaPrincipal, i, listaCaracteresAdmitidos, maquinaEstados.getEstadoInicial());
                 }

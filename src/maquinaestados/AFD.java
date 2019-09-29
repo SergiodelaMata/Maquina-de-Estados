@@ -87,7 +87,7 @@ public class AFD {
         }
     }
     
-    /**Carga el estado inicial de nuestra matriz del AF
+    /**Carga el estado inicial de nuestra matriz del AFD
      * @param posicionInicial*/
     public void establecerQi(int posicionInicial)
     {
@@ -165,9 +165,9 @@ public class AFD {
         
     }
     
-    /**Devuelve el siguiente estado de un caracter de acuerdo con el estado proporcionad
-     * @param estado
-     * @param character
+    /**Devuelve el siguiente estado de un caracter de acuerdo con el estado proporcionado
+     * @param estado estado actual de estudio
+     * @param character caracter a estudiar su siguiente estado dentro de la matriz
      * @return */
     public Integer getSiguienteEstado(Integer estado, Character character)
     {
@@ -175,7 +175,7 @@ public class AFD {
     }
     
     /**Carga los caracteres que admitirá nuestro alfabet
-     * @param estado
+     * @param estado estado actual de estudio
      * @return*/
     public boolean isFinal(Integer estado)
     {
@@ -190,7 +190,7 @@ public class AFD {
     }
     
     /**Comprueba si una caracter se encuentra dentro del alfabet
-     * @param character
+     * @param character caracter a comprobar
      * @return */
     public boolean isLetter(Character character)
     {
@@ -207,7 +207,7 @@ public class AFD {
         return alfabeto.contains(character);
     }
     
-    /**Devuelve una lista de los caracteres que admite la expresión regular del alfabeto del AF
+    /**Devuelve una lista de los caracteres que admite la expresión regular del alfabeto del AFD
      * @return*/
     public List<Character> getListaCaracteresAdmitidos()
     {
